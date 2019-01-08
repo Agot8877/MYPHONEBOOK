@@ -1,0 +1,60 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/Style.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class ="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="header">
+				<h2><a href="index.php">Phonebook</a></h2>
+				
+				<div class="content">
+					<!-- notification message -->
+					<?php if (isset($_SESSION['success'])) : ?>
+					  <div class="error success" >
+						<h3>
+						  <?php 
+							echo $_SESSION['success']; 
+							unset($_SESSION['success']);
+						  ?>
+						</h3>
+					  </div>
+					<?php endif ?>
+
+					<!-- logged in user information -->
+					<?php  if (isset($_SESSION['username'])) : ?>
+						<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+						&nbsp,&nbsp
+						<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+					<?php endif ?>
+					
+				</div>
+			</div>
+		</div>
+				
+	</div>
+		<div class="button">
+			<a class="btn btn-primary" href="index.php" role="button">Home</a>
+			<a class="btn btn-primary" href="add_contacts.php" role="button">Add Contact</a>
+		</div>
+			<div class="contents">
+				<h1>All Contacts</h1>
+			</div>
+</body>
+</html>
