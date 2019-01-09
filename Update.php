@@ -9,29 +9,32 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Update Contact</title>
 				<link rel="stylesheet" href="Foundation/css/foundation.css">
-			    <link rel="stylesheet" href="Foundation/app.css">
+			    <link rel="stylesheet" href="Foundation/css/app.css">
 	</head>
 	<?php include('assets/TopBar.php'); ?>
 <body>
+	<div class="header">
+  		<h2>Add Contact</h2>
+  	</div>
 	<form action="" method="post">
 	  <div class="grid-container">
 	    <div class="grid-x grid-padding-x">
-	      <div class="medium-3 cell">
+	      <div class="medium-12 cell">
 	        <label>Update Firstname
 	          <input type="text" name="first_name" value="<?php echo $row['first_name']; ?>" placeholder="firstname">
 	        </label>
 	      </div>
-	      <div class="medium-3 cell">
+	      <div class="medium-12 cell">
 	        <label>Update Middlename
 	          <input type="text" name="middle_name" value="<?php echo $row['middle_name']; ?>" placeholder="middlename">
 	        </label>
 	      </div>
-	      <div class="medium-3 cell">
+	      <div class="medium-12 cell">
 	        <label>Update Last Name
 	          <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>" placeholder="lastname">
 	        </label>
 	      </div>
-	      <div class="medium-3 cell expanded">
+	      <div class="medium-12 cell expanded">
 	        <label> Update Contact Number
 	          <input type="number" name="cell_phone_number" value="<?php echo $row['Phone_Number']; ?>" placeholder="phonenumber">
 	        </label>

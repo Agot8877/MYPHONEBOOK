@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
       
             $result = mysqli_query($db,$query);
             $row = mysqli_fetch_array($result,MYsqlI_ASSOC);
-            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
             $count = mysqli_num_rows($result);
 
             if($count == 1) {
