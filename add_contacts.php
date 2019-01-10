@@ -1,5 +1,6 @@
 <?php
 $cell_phone_number_err="";
+$user_id = $_SESSION['username'];
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'bookphone');
@@ -39,17 +40,17 @@ if (isset($_POST['submit'])) {
             
     }
     if(empty($cell_phone_number_err)){
-            $query = "INSERT INTO Contacts (first_name,middle_name,last_name,Phone_Number) VALUES 
-            ('$first_name','$middle_name','$last_name','$cell_phone_number')";
+            $query = "INSERT INTO Contacts (first_name,middle_name,last_name,Phone_Number,username) VALUES 
+            ('$first_name','$middle_name','$last_name','$cell_phone_number','$user_id')";
 
             if (mysqli_query($db, $query)) {
-                header("location:insert_contact.php?contact_added=1");
+                header('location:index.php?contact_added=1');
             } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($db);
             }
 
         }else{
-      header("location: insert_contact.php?taken_cellnum=1");
+      header('location: insert_contact.php?taken_cellnum=1');
     }
         
         mysqli_close($db);

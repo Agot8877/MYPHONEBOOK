@@ -5,15 +5,6 @@
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
         <li class="menu-text" href="index.php">PhoneBook</li>
-          <ul class="menu">
-            <!--Search  -->
-            
-            <li><form action="search.php" method="GET">
-                    <input type="text" name="query" />
-                    <input type="submit" value="Search" />
-                </form>
-            </li>
-          </ul>
       </ul>
     </div>
     <!--Username Display -->

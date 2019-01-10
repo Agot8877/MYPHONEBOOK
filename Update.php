@@ -1,6 +1,5 @@
-<?php 
-    include('edit.php');
-?>
+<?php include('edit.php'); ?>
+<?php include('assets/session.php') ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,8 +10,9 @@
 				<link rel="stylesheet" href="Foundation/css/foundation.css">
 			    <link rel="stylesheet" href="Foundation/css/app.css">
 	</head>
-	<?php include('assets/TopBar.php'); ?>
+	
 <body>
+	<?php include('assets/TopBar_add&update.php'); ?>
 	<div class="header">
   		<h2>Add Contact</h2>
   	</div>

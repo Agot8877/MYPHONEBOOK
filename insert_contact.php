@@ -1,3 +1,4 @@
+<?php include('assets/session.php'); ?>
 <?php 
     include('add_contacts.php');
 ?>
@@ -11,10 +12,8 @@
     <link rel="stylesheet" href="Foundation/css/foundation.css">
     <link rel="stylesheet" href="Foundation/css/app.css">
   </head>
-  <?php include('assets/TopBar.php'); ?>
-  	
-  
 <body>
+	<?php include('assets/TopBar_add&update.php'); ?>
 	<div class="header">
   		<h2>Add Contact</h2>
   	</div>
@@ -23,12 +22,12 @@
 	    <div class="grid-x grid-padding-x">
 	      <div class="medium-12 cell">
 	        <label>Input Firstname
-	          <input type="text" name="first_name" placeholder="firstname" required="">
+	          <input type="text" name="first_name" placeholder="firstname" required>
 	        </label>
 	      </div>
 	      <div class="medium-12 cell">
 	        <label>Input Middlename
-	          <input type="text" name="middle_name" placeholder="middlename" required="">
+	          <input type="text" name="middle_name" placeholder="middlename" required>
 	        </label>
 	      </div>
 	      <div class="medium-12 cell">
@@ -38,7 +37,7 @@
 	      </div>
 	      <div class="medium-12 cell expanded">
 	        <label> Input Contact Number
-	          <input type="number" name="cell_phone_number" placeholder="phonenumber" required="">
+	          <input type="number" name="cell_phone_number" placeholder="phonenumber" required>
 	        </label>
 	      </div>
 	    </div>
